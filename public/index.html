@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+    </head>
+    <body>
+        <div style="content: center;">
+            <div>                
+                <canvas id="canvas" width="500" height="500"></canvas>
+            </div>
+            <div>
+                <table style="margin-left: 50%;">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button style="width: 50px; height:40px" onclick="upEvent()">Up</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button style="width: 50px; height:40px" onclick="leftEvent()">Left</button>
+                        </td>
+                        <td></td>
+                        <td>
+                            <button style="width: 50px; height:40px" onclick="rightEvent()">Right</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button style="width: 50px; height:40px" onclick="downEvent()">Down</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="snake.js"></script>
+    </body>
+</html>

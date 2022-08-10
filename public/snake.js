@@ -42,8 +42,6 @@ class Snake{
 
 class Apple{
     constructor(){
-        console.log("apple")
-        console.log(snake.size)
         var isTouching;
         while(true){
             isTouching=false;
@@ -77,7 +75,7 @@ window.onload=()=>{
 }
 
 function gameLoop(){
-    setInterval(show, 2000/15)
+    setInterval(show, 1500/15)
 }
 
 function show(){
@@ -87,7 +85,6 @@ function show(){
 
 function update(){
     canvasContext.clearRect(0,0,canvas.width, canvas.height)
-    console.log("update");
     snake.move()
     eatApple()
     checkHitWall();
@@ -152,3 +149,35 @@ window.addEventListener("keydown", (event)=>{
         }
     })
 })
+function rightEvent(){
+    setTimeout(()=>{
+        if (snake.rotateX != -1) {            
+            snake.rotateX=1
+            snake.rotateY=0;
+        }
+    })     
+}
+function upEvent(){
+    setTimeout(()=>{
+        if (snake.rotateY != 1) {            
+            snake.rotateX=0
+            snake.rotateY= -1;
+        }
+    })     
+}
+function downEvent(){
+    setTimeout(()=>{
+        if (snake.rotateY != -1) {            
+            snake.rotateX=0
+            snake.rotateY=1;
+        }
+    })     
+}
+function leftEvent(){
+    setTimeout(()=>{
+        if (snake.rotateX != 1) {            
+            snake.rotateX= -1
+            snake.rotateY=0;
+        }
+    })     
+}
